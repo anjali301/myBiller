@@ -54,7 +54,8 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/topView"
-        tools:layout_editor_absoluteY="42dp" />
+        tools:layout_editor_absoluteY="42dp"
+        android:gravity="center_horizontal" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
