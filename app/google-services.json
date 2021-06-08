@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "627725074949",
+    "project_id": "mybiller-d4dfb",
+    "storage_bucket": "mybiller-d4dfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627725074949:android:6046dc57d8e10b482a526c",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627725074949-5vde4mlt4tgiscb5fisd0c4sj086cvne.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWVykJqUHzxhjTcABPDygak_3luoIWd7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627725074949-5vde4mlt4tgiscb5fisd0c4sj086cvne.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
