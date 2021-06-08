@@ -38,8 +38,8 @@
 
     <TextView
         android:id="@+id/topText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="242dp"
+        android:layout_height="64dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="32dp"
@@ -52,9 +52,9 @@
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/topView"
-        tools:layout_editor_absoluteY="42dp" />
+        tools:layout_editor_absoluteY="59dp" />
 
     <TextView
         android:id="@+id/textView5"
