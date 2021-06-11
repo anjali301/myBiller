@@ -67,10 +67,26 @@
         android:background="#2196F3"
         android:text="Add Data"
         android:textColor="#050505"
+        android:textStyle="bold"
+        app:backgroundTint="#2196F3"
         app:iconTint="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="106dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="396dp"
+        android:text="View All"
+        android:textColor="#090909"
+        android:textStyle="bold"
+        app:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toEndOf="@+id/button4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
