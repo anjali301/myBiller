@@ -9,6 +9,7 @@
     android:orientation="vertical">
 
     <EditText
+        android:id="@+id/userphoneno"
         android:layout_width="369dp"
         android:layout_height="77dp"
         android:layout_margin="10dp"
