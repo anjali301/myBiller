@@ -1,38 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Activity.GetOPT"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="236dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="280dp"
+    <EditText
+        android:id="@+id/userphoneno2"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_margin="10dp"
         android:background="@drawable/round_border"
-        android:drawableStart="@drawable/lock"
-        android:hint="Enter verification code"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter your otp"
+        android:inputType="number"
+        android:padding="5dp"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="76dp" />
 
     <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:background="@drawable/round_bg"
-        android:text="Confirm"
-        android:textColor="@color/design_default_color_background"
+        android:id="@+id/verifyotp"
+        android:layout_width="205dp"
+        android:layout_height="62dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:onClick="verifyOTP"
+        android:text="Verify"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:backgroundTint="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:backgroundTint="@color/colorPrimary" />
+
+</LinearLayout>

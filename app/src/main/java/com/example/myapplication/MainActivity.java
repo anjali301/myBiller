@@ -13,7 +13,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    DatabaseHelper myDb;
+    com.example.myapplication.DatabaseHelper myDb;
     EditText editProductName, editDescription, editPrice;
     Button btnAddData;
     Button btnviewAll;
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        myDb = new DatabaseHelper(this);
+        myDb = new com.example.myapplication.DatabaseHelper(this);
 
         editProductName = (EditText) findViewById(R.id.editTextTextPersonName3);
         editDescription = (EditText) findViewById(R.id.editTextTextPersonName4);
