@@ -140,7 +140,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/reg_btn"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
@@ -149,6 +149,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/round_bg"
+        android:onClick="proceedOTP"
         android:text="Register"
         android:textColor="@color/design_default_color_background"
         android:textSize="18sp"
@@ -165,7 +166,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_btn" />
 
     <TextView
         android:id="@+id/textView2"
@@ -178,6 +179,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/reg_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

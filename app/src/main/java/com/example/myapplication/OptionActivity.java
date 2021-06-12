@@ -20,7 +20,7 @@ public class OptionActivity extends AppCompatActivity {
         buttonRegister = findViewById(R.id.button_register);
     }
     public void proceedLogin(View view) {
-        startActivity(new Intent(this, LoginActivity.class));
+        startActivity(new Intent(this, MainActivity.class));
     }
     public void proceedRegister(View view) {
         startActivity(new Intent(this, RegisterActivity.class));
