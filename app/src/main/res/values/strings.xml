@@ -11,4 +11,8 @@
     <string name="menu_home">Home</string>
     <string name="menu_about">About</string>
     <string name="menu_contact">Contact</string>
+    <string name="name">Name</string>
+    <string name="general_information">General Information</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="address">Address</string>
 </resources>
