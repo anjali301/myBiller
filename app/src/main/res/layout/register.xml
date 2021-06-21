@@ -8,18 +8,18 @@
 
     <View
         android:id="@+id/topView"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_width="411dp"
+        android:layout_height="125dp"
         android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/view2"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_width="408dp"
+        android:layout_height="39dp"
         android:background="@drawable/ic_wave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
