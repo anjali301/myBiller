@@ -182,8 +182,7 @@
                     android:hint="PROCEED"
                     android:padding="8dp"
                     android:id="@+id/btn_PROCEED"
-                    android:gravity="center"
-                    anr
+                    android:gravity="center" />
             </LinearLayout>
 
 
