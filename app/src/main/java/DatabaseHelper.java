@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.text.Editable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -44,7 +45,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     public Cursor getAllData() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res= db.rawQuery("select * from" + TABLE_NAME,null);
+        Cursor res= db.rawQuery("select * from " + TABLE_NAME,null);
         return res;
+    }
+    public boolean updateData(String id, String name, String description, String price) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Col_1, id);
+        contentValues.put(Col_2, name);
+        contentValues.put(Col_3, description);
+        contentValues.put(Col_4, price);
+        db.update(TABLE_NAME, contentValues, "ID = ?", new String[]{id});
+        return true;
+    }
+    public Integer deleteData(Editable text, String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME, "ID = ?", new String[] {id});
     }
 }
