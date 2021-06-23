@@ -15,4 +15,6 @@
     <string name="general_information">General Information</string>
     <string name="mobile_no">Mobile No.</string>
     <string name="address">Address</string>
+    <string name="choose_logo_image">Choose Logo Image</string>
+    <string name="todo">TODO</string>
 </resources>
