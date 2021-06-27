@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".OTPActivity">
 
     <EditText
         android:id="@+id/editTextTextPassword2"
@@ -16,12 +16,28 @@
         android:hint="Enter your phone number"
         android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="293dp"
-        android:layout_height="62dp"
-        android:text="Send OTP"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/colorPrimary" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="Send OTP"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/colorPrimary" />
+
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+
 </LinearLayout>

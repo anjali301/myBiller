@@ -14,13 +14,6 @@
         android:textSize="25dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="150dp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Logo(Choose File)"
-        android:textSize="25dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp" />
 
     <TextView
         android:layout_width="383dp"
