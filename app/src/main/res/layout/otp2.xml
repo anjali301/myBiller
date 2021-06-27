@@ -116,10 +116,11 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/resendOTP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:onClick="resendOTP"
         android:text="Resend OTP"
         android:textSize="18sp" />
 
