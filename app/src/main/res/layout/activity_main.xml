@@ -133,6 +133,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
+        android:onClick="gotoRegister"
         android:text="Don't have an account? Register"
         android:textSize="18sp"
         android:textStyle="bold"

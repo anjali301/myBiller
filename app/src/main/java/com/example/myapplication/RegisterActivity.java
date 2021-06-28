@@ -24,4 +24,7 @@ public class RegisterActivity extends AppCompatActivity {
     public void proceedOTP(View view) {
         startActivity(new Intent(this, OTPActivity.class));
     }
+    public void gotoLogin(View view) {
+        startActivity(new Intent(this, LoginPage.class));
+    }
 }
