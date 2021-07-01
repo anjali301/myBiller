@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         boolean isUpdate = myDb.updateData(editTextId.getText().toString(), editProductName.getText().toString(),
                                 editDescription.getText().toString(), editPrice.getText().toString() );
-                        if(isUpdate == true)
+                        if(isUpdate)
                             Toast.makeText(MainActivity.this, "Data Updated", Toast.LENGTH_LONG).show();
                         else
                             Toast.makeText(MainActivity.this, "Data not Updated", Toast.LENGTH_LONG).show();
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     boolean isInserted = myDb.insertData(editProductName.getText().toString(), editDescription.getText().toString(),
                             editPrice.getText().toString());
 
-                    if (isInserted == true)
+                    if (isInserted)
                         Toast.makeText(MainActivity.this, "Data Inserted", Toast.LENGTH_LONG).show();
                     else
                         Toast.makeText(MainActivity.this, "Data not Inserted", Toast.LENGTH_LONG).show();
@@ -98,10 +98,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                     StringBuffer buffer = new StringBuffer();
                     while(res.moveToNext()){
-                        buffer.append("ID:"+ res.getString(0)+"\n");
-                        buffer.append("Name:"+ res.getString(1)+"\n");
-                        buffer.append("Description:"+ res.getString(2)+"\n");
-                        buffer.append("Price:"+ res.getString(3)+"\n");
+                        buffer.append("ID:").append(res.getString(0)).append("\n");
+                        buffer.append("Name:").append(res.getString(1)).append("\n");
+                        buffer.append("Description:").append(res.getString(2)).append("\n");
+                        buffer.append("Price:").append(res.getString(3)).append("\n");
                     }
                     //Show all data
                     showMessage("data", buffer.toString());
