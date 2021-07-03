@@ -203,4 +203,9 @@ public class OTPActivity2 extends AppCompatActivity {
             public void afterTextChanged(Editable s){}
         });
     }
+    public void verifyOTP(View view) {
+        startActivity(new Intent(this, homepage.class));
+    }
 }
+
+
