@@ -39,7 +39,7 @@ public class OTPActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.otp2);
 
-        TextView textMobile = findViewById(R.id.editTextTextPassword2);
+        TextView textMobile = findViewById(R.id.editTextPhone2);
         textMobile.setText(String.format(
                 "+91-%s", getIntent().getStringExtra("mobile")
         ));
