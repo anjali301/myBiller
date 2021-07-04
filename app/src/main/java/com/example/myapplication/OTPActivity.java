@@ -24,7 +24,7 @@ public class OTPActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.otp1);
 
-        final EditText inputmobile = findViewById(R.id.editTextTextPassword2);
+        final EditText inputmobile = findViewById(R.id.editTextPhone2);
         Button buttonGetOTP = findViewById(R.id.button);
 
         final ProgressBar progressBar = findViewById(R.id.progressBar);

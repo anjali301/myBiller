@@ -22,7 +22,7 @@ public class RegisterActivity extends AppCompatActivity {
         registerButton = findViewById(R.id.reg_btn);
     }
     public void proceedOTP(View view) {
-        startActivity(new Intent(this, OTPActivity.class));
+        startActivity(new Intent(this, LoginPage.class));
     }
     public void gotoLogin(View view) {
         startActivity(new Intent(this, LoginPage.class));

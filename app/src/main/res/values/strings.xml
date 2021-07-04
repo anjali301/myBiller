@@ -17,4 +17,9 @@
     <string name="address">Address</string>
     <string name="choose_logo_image">Choose Logo Image</string>
     <string name="todo">TODO</string>
+    <string name="title_activity_nav">NavActivity</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_client">Client Details</string>
+    <string name="menu_product">Product Details</string>
 </resources>

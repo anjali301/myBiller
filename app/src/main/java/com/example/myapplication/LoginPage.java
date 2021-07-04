@@ -17,7 +17,7 @@ public class LoginPage extends AppCompatActivity {
         Button loginButton = findViewById(R.id.reg_btn);
     }
     public void proceedMainPage(View view) {
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, homepage.class);
         startActivity(i);
     }
     public void gotoRegister(View view) {

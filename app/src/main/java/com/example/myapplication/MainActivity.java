@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.product_detailsp1);
+        setContentView(R.layout.fragment_product);
         myDb = new DatabaseHelper(this);
         editProductName = (EditText) findViewById(R.id.editTextTextPersonName3);
         editDescription = (EditText) findViewById(R.id.editTextTextPersonName4);
