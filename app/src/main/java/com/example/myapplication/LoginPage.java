@@ -13,45 +13,33 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 public class LoginPage extends AppCompatActivity {
-    protected EditText edUsername, edPassword; //
-    protected Button btnLogin;
-
-    private final String CREDENTIAL_SHARED_PREF = "our_shared_pref"; //
+    EditText username, password;
+    Button btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        edUsername = findViewById(R.id.editTextTextPersonName);  //
-        edPassword = findViewById(R.id.editTextTextPassword);//
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        username = findViewById(R.id.editTextTextPersonName);
+        password = findViewById(R.id.editTextTextPassword);
         btnLogin = findViewById(R.id.reg_btn);
-
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                SharedPreferences credential = getSharedPreferences(CREDENTIAL_SHARED_PREF, Context.MODE_PRIVATE);
-                String strUsername = credential.getString("Username", null);
-                String strPassword = credential.getString("Password", null);
-
-                String username_from_ed = edUsername.getText().toString();
-                String password_from_ed = edPassword.getText().toString();
-
-                if (strUsername != null && username_from_ed != null &&  strUsername.equalsIgnoreCase(username_from_ed)){
-                    if (strPassword != null && password_from_ed != null && strPassword.equalsIgnoreCase(password_from_ed)){
-                        Toast.makeText(LoginPage.this, "Login Successfully", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(LoginPage.this, "Login Failed", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    Toast.makeText(LoginPage.this, "Login Failed", Toast.LENGTH_SHORT).show();
+            public void onClick(View v) {
+                if(username.getText().toString().isEmpty() || password.getText().toString().isEmpty()) {
+                    Toast.makeText(LoginPage.this, "Please enter all credentials", Toast.LENGTH_SHORT).show();
                 }
-
+                else {
+                    proceedMainPage();
+                }
             }
         });
+
     }
-    public void proceedMainPage(View view) {
+    public void proceedMainPage() {
         Intent i = new Intent(this, homepage.class);
+        Toast.makeText(LoginPage.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
         startActivity(i);
     }
     public void gotoRegister(View view) {
