@@ -114,7 +114,7 @@ public class ProductFragment extends Fragment {
                         buffer.append("ID:").append(res.getString(0)).append("\n");
                         buffer.append("Name:").append(res.getString(1)).append("\n");
                         buffer.append("Description:").append(res.getString(2)).append("\n");
-                        buffer.append("Price:").append(res.getString(3)).append("\n");
+                        buffer.append("Price:").append(res.getString(3)).append("\n\n");
                     }
                     //Show all data
                     showMessage("data", buffer.toString());
