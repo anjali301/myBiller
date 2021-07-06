@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.product;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -13,27 +14,25 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myapplication.DatabaseHelper;
-import com.example.myapplication.PdfDatabase;
+import com.example.myapplication.PDFActivity;
 import com.example.myapplication.R;
 
 public class ProductFragment extends Fragment {
 
-    private ProductViewModel productViewModel;
+
     DatabaseHelper myDb;
     EditText editProductName, editDescription, editPrice, editTextId;
     Button btnAddData;
     Button btnviewAll;
     Button btnviewUpdate;
     Button btnDelete;
-
+    Activity context;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        productViewModel =
-                new ViewModelProvider(this).get(ProductViewModel.class);
+        context = getActivity();
         View root = inflater.inflate(R.layout.fragment_product, container, false);
         myDb = new DatabaseHelper(getActivity());
         editProductName = root.findViewById(R.id.editTextTextPersonName3);
@@ -43,18 +42,33 @@ public class ProductFragment extends Fragment {
         btnAddData = root.findViewById(R.id.button4);
         btnviewAll = root.findViewById(R.id.button7);
         btnviewUpdate = root.findViewById(R.id.button8);
-        final Button btnNext = (Button) root.findViewById(R.id.button2);
+//        final Button btnNext = (Button) root.findViewById(R.id.button2);
         btnDelete= root.findViewById(R.id.button9);
-        Intent intent = new Intent(getActivity(), PdfDatabase.class);
-        btnNext.setOnClickListener(v -> {
-            Toast.makeText(getActivity(), "Proceed to generate PDF", Toast.LENGTH_SHORT).show();
-            startActivity(intent);
-        });
+//        Intent intent = new Intent(getActivity(), PdfDatabase.class);
+//        btnNext.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(getActivity(), "Going to PDF generator", Toast.LENGTH_SHORT).show();
+//                startActivity(intent);
+//            }
+//        });
         AddData();
         viewAll();
         UpdateData();
         DeleteData();
         return root;
+    }
+    public void onStart() {
+        super.onStart();
+        Button btnNext = (Button) context.findViewById(R.id.button2);
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, PDFActivity.class);
+                Toast.makeText(getActivity(), "Going to PDF generator", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
     }
     public void DeleteData() {
         btnDelete.setOnClickListener(

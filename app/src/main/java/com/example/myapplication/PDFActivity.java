@@ -1,13 +1,13 @@
 package com.example.myapplication;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.Toast;
-
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.colors.DeviceRgb;
@@ -26,22 +26,17 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 
-import static com.example.myapplication.R.layout.final_last_pdf;
-
-
-public class PdfDatabase extends AppCompatActivity {
-
+public class PDFActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(final_last_pdf);
+        setContentView(R.layout.activity_pdf);
         try {
             createPdf();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -52,7 +47,7 @@ public class PdfDatabase extends AppCompatActivity {
 
         PdfWriter writer = new PdfWriter(file);
         PdfDocument pdfDocument = new PdfDocument(writer); //writer
-        Document document = new Document(pdfDocument);  // pdfDocumenty
+        Document document = new Document(pdfDocument);  // pdfDocument
 
         float[] columnWidth = {112, 112, 120, 104, 112};
         Table table = new Table(columnWidth);
@@ -225,17 +220,4 @@ public class PdfDatabase extends AppCompatActivity {
     private PdfWriter getWriter(PdfWriter writer) {
         return writer;
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
