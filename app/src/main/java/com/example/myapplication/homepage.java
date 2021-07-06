@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -57,7 +58,6 @@ public class homepage extends AppCompatActivity {
 //        AddData();
 //        viewAll();
     }
-
 //    public void AddData() {
 //        btnAddData.setOnClickListener(
 //                v -> {

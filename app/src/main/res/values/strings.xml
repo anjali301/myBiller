@@ -22,4 +22,5 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_client">Client Details</string>
     <string name="menu_product">Product Details</string>
+    <string name="generate_pdf">Generate PDF</string>
 </resources>

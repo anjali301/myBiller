@@ -1,26 +1,22 @@
 package com.example.myapplication.ui.product;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myapplication.DatabaseHelper;
-import com.example.myapplication.MainActivity;
+import com.example.myapplication.PdfDatabase;
 import com.example.myapplication.R;
 
 public class ProductFragment extends Fragment {
@@ -32,6 +28,7 @@ public class ProductFragment extends Fragment {
     Button btnviewAll;
     Button btnviewUpdate;
     Button btnDelete;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -46,7 +43,13 @@ public class ProductFragment extends Fragment {
         btnAddData = root.findViewById(R.id.button4);
         btnviewAll = root.findViewById(R.id.button7);
         btnviewUpdate = root.findViewById(R.id.button8);
+        final Button btnNext = (Button) root.findViewById(R.id.button2);
         btnDelete= root.findViewById(R.id.button9);
+        Intent intent = new Intent(getActivity(), PdfDatabase.class);
+        btnNext.setOnClickListener(v -> {
+            Toast.makeText(getActivity(), "Proceed to generate PDF", Toast.LENGTH_SHORT).show();
+            startActivity(intent);
+        });
         AddData();
         viewAll();
         UpdateData();
@@ -129,6 +132,7 @@ public class ProductFragment extends Fragment {
         builder.setMessage(Message);
         builder.show();
     }
+
 
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu){
