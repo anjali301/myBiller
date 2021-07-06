@@ -110,7 +110,6 @@
         android:layout_marginRight="32dp"
         android:background="@drawable/round_bg"
         android:enabled="true"
-        android:onClick="proceedMainPage"
         android:text="Login"
         android:textColor="@color/design_default_color_background"
         android:textSize="18sp"

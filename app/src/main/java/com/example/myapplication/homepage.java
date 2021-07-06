@@ -121,6 +121,18 @@ public class homepage extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.action_logout:
+                Intent i = new Intent(this, LoginPage.class);
+                this.startActivity(i);
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
+    }
 
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
