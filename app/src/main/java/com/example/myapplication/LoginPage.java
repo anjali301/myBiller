@@ -1,8 +1,6 @@
 package com.example.myapplication;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +20,7 @@ public class LoginPage extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         username = findViewById(R.id.editTextTextPersonName);
         password = findViewById(R.id.editTextTextPassword);
-        btnLogin = findViewById(R.id.reg_btn);
+        btnLogin = findViewById(R.id.btnClient);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override

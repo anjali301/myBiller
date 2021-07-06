@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,10 +32,10 @@ import java.io.IOException;
 import static android.app.Activity.RESULT_OK;
 
 public class ClientFragment extends Fragment {
-
+    EditText name, email, phone, address;
     ImageView mImageView;
     Button mChooseBtn;
-
+    Button clientBtn;
     private static final int IMAGE_PICK_CODE = 1000;
     private static final int PERMISSION_CODE = 1001;
 
@@ -45,8 +46,13 @@ public class ClientFragment extends Fragment {
         clientViewModel =
                 new ViewModelProvider(this).get(ClientViewModel.class);
         View root = inflater.inflate(R.layout.fragment_client, container, false);
+        name = root.findViewById(R.id.editTextTextPersonName);
+        email = root.findViewById(R.id.editTextTextEmailAddress);
+        phone = root.findViewById(R.id.editTextPhone);
+        address = root.findViewById(R.id.editTextTextMultiLine);
         mImageView = root.findViewById(R.id.image_view);
         mChooseBtn = root.findViewById(R.id.image_btn);
+        clientBtn = root.findViewById(R.id.btnClient);
         mChooseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +65,23 @@ public class ClientFragment extends Fragment {
                     }
             }
         });
-
+        clientBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(name.getText().toString().isEmpty() ||
+                    email.getText().toString().isEmpty() ||
+                    phone.getText().toString().isEmpty() ||
+                    address.getText().toString().isEmpty()) {
+                    Toast.makeText(getActivity(), "Please enter all details", Toast.LENGTH_SHORT).show();
+                }
+                else if (phone.getText().toString().length() != 10){
+                    Toast.makeText(getActivity(), "Please enter 10 digit mobile number", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(getActivity(), "Client added successfully", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         return root;
     }
     private void pickImageFromGallery() {
@@ -99,4 +121,5 @@ public class ClientFragment extends Fragment {
             }
         }
     }
+
 }

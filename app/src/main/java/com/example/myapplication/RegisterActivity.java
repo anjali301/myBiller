@@ -1,8 +1,6 @@
 package com.example.myapplication;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +21,7 @@ public class RegisterActivity extends AppCompatActivity {
         username = findViewById(R.id.editTextTextPersonName2);
         password = findViewById(R.id.editTextTextPassword);
         confirmPassword = findViewById(R.id.editTextTextPassword3);
-        btnCreateUser = findViewById(R.id.reg_btn);
+        btnCreateUser = findViewById(R.id.btnClient);
 
         btnCreateUser.setOnClickListener(new View.OnClickListener() {
             @Override
